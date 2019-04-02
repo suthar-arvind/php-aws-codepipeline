@@ -12,7 +12,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed1: " . $conn->connect_error);
 } else {
-echo "New record created successfully";
+echo "Hello, RDS connection successfully";
 }
 $conn->close();
 ?>
