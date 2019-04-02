@@ -11,12 +11,8 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed1: " . $conn->connect_error);
-}
-$sql = "INSERT INTO contact VALUES ('$firstname','$email','$message')";
-if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+echo "New record created successfully";
 }
 $conn->close();
 ?>
