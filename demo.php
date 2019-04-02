@@ -1,8 +1,8 @@
 <?php
-$servername = "dev.cyebsjs4wlst.us-west-2.rds.amazonaws.com";//endpoint
-$username = "";//db user name
-$password = "";//db password
-$dbname = ""; // database user
+$servername = "rds-mysql.c1gq3pfkcajq.us-east-1.rds.amazonaws.com";//endpoint
+$username = "arvind";//db user name
+$password = "mxz32k11hf";//db password
+$dbname = "phpapp"; // database user
 $firstname = $_POST["fname"];
 $email = $_POST["email"];
 $message = $_POST["message"];
@@ -10,7 +10,7 @@ $message = $_POST["message"];
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    die("Connection failed1: " . $conn->connect_error);
 }
 $sql = "INSERT INTO contact VALUES ('$firstname','$email','$message')";
 if ($conn->query($sql) === TRUE) {
